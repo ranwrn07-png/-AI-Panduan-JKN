@@ -1,0 +1,49 @@
+{
+  "name": "JKN Pintar - Asisten AI Panduan Aplikasi JKN",
+  "short_name": "JKN Pintar",
+  "description": "Chat dengan AI untuk mendapatkan panduan lengkap tentang penggunaan Aplikasi JKN. Tanya tentang registrasi, klaim, rujukan, dan layanan kesehatan.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#0b63d6",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230b63d6' width='192' height='192'/><text x='96' y='140' font-size='120' font-weight='bold' fill='white' text-anchor='middle'>π</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%230b63d6' width='512' height='512'/><text x='256' y='380' font-size='320' font-weight='bold' fill='white' text-anchor='middle'>π</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["productivity", "medical"],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%23f8f9ff' width='540' height='720'/><rect x='20' y='40' width='500' height='80' fill='%230b63d6' rx='8'/><text x='270' y='85' font-size='32' fill='white' text-anchor='middle'>JKN Pintar</text><rect x='20' y='150' width='500' height='500' fill='white' rx='8' stroke='%23e3e8ee' stroke-width='1'/><text x='30' y='180' font-size='16' fill='%23666'>Chat dengan AI</text></svg>",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Chat Baru",
+      "short_name": "Chat",
+      "description": "Mulai chat baru dengan JKN Pintar",
+      "url": "/?action=new-chat",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><circle fill='%230b63d6' cx='48' cy='48' r='48'/><text x='48' y='65' font-size='60' fill='white' text-anchor='middle'>💬</text></svg>",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}

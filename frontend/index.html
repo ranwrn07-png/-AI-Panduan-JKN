@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="description" content="JKN Pintar - Asisten AI untuk panduan penggunaan Aplikasi JKN. Chat dengan AI untuk menjawab pertanyaan tentang registrasi, klaim, rujukan, dan layanan kesehatan." />
+  <meta name="keywords" content="JKN, BPJS, Kesehatan, AI Chat, Panduan, Asisten Digital" />
+  <meta name="author" content="JKN Pintar" />
+  <meta name="theme-color" content="#0b63d6">
+  <meta name="api-base" content="https://api.jknpintar.com/api">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="JKN Pintar">
+  <meta property="og:title" content="JKN Pintar - Asisten AI untuk JKN" />
+  <meta property="og:description" content="Chat dengan AI untuk mendapatkan panduan lengkap tentang Aplikasi JKN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jknpintar.com" />
+  <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect fill='%230b63d6' width='1200' height='630'/><text x='600' y='450' font-size='200' font-weight='bold' fill='white' text-anchor='middle'>JKN Pintar</text><text x='600' y='530' font-size='60' fill='white' text-anchor='middle'>Asisten AI untuk Panduan Aplikasi JKN</text></svg>" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="JKN Pintar" />
+  <meta property="twitter:description" content="Asisten AI untuk panduan Aplikasi JKN" />
+  <title>JKN Pintar - Asisten AI untuk Panduan Aplikasi JKN</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="canonical" href="https://jknpintar.com/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230b63d6' width='100' height='100'/><text y='75' font-size='75' font-weight='bold' fill='white' text-anchor='middle' x='50'>π</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%230b63d6' width='180' height='180' rx='40'/><text y='140' font-size='110' font-weight='bold' fill='white' text-anchor='middle' x='90'>π</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <div class="header">
+        <h1>🏥 JKN Pintar</h1>
+        <p class="tagline">Asisten AI untuk panduan Aplikasi JKN</p>
+      </div>
+      <div id="auth-area">
+        <div id="register-area" style="display:none;">
+          <h3>Daftar Akun Baru</h3>
+          <input id="reg-email" placeholder="Email Anda" />
+          <div style="margin-top:8px;display:flex;gap:8px;">
+            <button id="btn-send-code">Kirim Kode Verifikasi</button>
+            <span id="send-code-status" class="muted"></span>
+          </div>
+          <input id="reg-code" placeholder="Masukkan kode verifikasi" />
+          <input id="reg-pass" type="password" placeholder="Password" />
+          <button id="btn-verify-register">Verifikasi & Daftar</button>
+          <button id="btn-cancel-register" class="secondary">Batal</button>
+        </div>
+        <hr />
+        <div id="login-area">
+          <h3>Login</h3>
+          <input id="login-email" placeholder="Email" />
+          <input id="login-pass" type="password" placeholder="Password" />
+          <div style="display:flex;gap:8px;margin-top:8px;">
+            <button id="btn-login">Login</button>
+            <button id="btn-show-register" class="secondary">DAFTAR</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="link-area" style="display:none;">
+        <h3>Link Akun JKN</h3>
+        <p class="hint">Masukkan ID JKN Anda untuk akses data personal</p>
+        <input id="jkn-id" placeholder="Masukkan JKN ID" />
+        <button id="btn-link">Link Akun</button>
+        <button id="btn-skip" class="secondary">Lewati</button>
+      </div>
+
+      <div id="chat-controls" style="display:none;">
+        <h3>💬 Chat dengan AI</h3>
+        <textarea id="message" placeholder="Tanyakan sesuatu tentang JKN..."></textarea>
+        <button id="btn-send">Kirim Pesan</button>
+        <button id="btn-logout" class="logout-btn">Logout</button>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div id="chatbox">
+        <div id="messages"></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script>
+    // Register service worker untuk PWA support (optional)
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {
+        // SW tidak wajib
+      });
+    }
+  </script>
+</body>
+</html>

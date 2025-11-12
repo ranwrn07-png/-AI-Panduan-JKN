@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api
+
+Sitemap: https://jknpintar.com/sitemap.xml
+
+# Crawl delay (opsional)
+Crawl-delay: 1
